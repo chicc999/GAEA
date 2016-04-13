@@ -9,7 +9,7 @@
     <module>DomainNode</module>
     <module>DataNode</module>
     <module>Gatty</module>
-    <module>Protol</module>
+    <module>Protocol</module>
     <module>MetaManager</module>
     <module>SkyDrive</module>
   </modules>
@@ -23,6 +23,31 @@
   </properties>
 
   <dependencies>
+
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-all</artifactId>
+      <version>4.0.36.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.5</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
