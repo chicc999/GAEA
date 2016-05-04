@@ -1,0 +1,22 @@
+
+option java_package = "com.cy.protocol.protobuf";
+option java_outer_classname = "ProtocolMessage";
+
+message Request {
+    required string requestId = 1;
+    required MsgType msgType = 2;
+    required int32 contentLength =3;
+    optional File fileInfo = 4;
+}
+
+enum MsgType{
+    heartbeat = 0;
+    create = 1;
+}
+
+message File{
+    required string origFileNamel =1;
+    required int64 fileSize =2;
+}
+
+//protoc -I=./ --java_out=../java  Message.proto
