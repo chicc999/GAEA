@@ -3,14 +3,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.cy.gaea</groupId>
-    <artifactId>Gaea</artifactId>
+    <artifactId>gaea-all</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>gaea-domainNode</module>
+        <module>gaea-danaNode</module>
+        <module>gaea-client</module>
+        <module>gaea-common</module>
     </modules>
     <packaging>pom</packaging>
 
-    <name>Gaea</name>
+    <name>gaea-all</name>
     <url>http://maven.apache.org</url>
 
     <!-- 集中定义依赖版本号 -->

@@ -7,10 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>gaea-domainNode</artifactId>
+    <artifactId>gaea-danaNode</artifactId>
     <packaging>jar</packaging>
 
-    <name>gaea-domainNode</name>
+    <name>gaea-danaNode</name>
     <url>http://maven.apache.org</url>
 
     <properties>
