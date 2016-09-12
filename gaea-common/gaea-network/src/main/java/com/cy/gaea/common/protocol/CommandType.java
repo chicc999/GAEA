@@ -5,7 +5,7 @@ package com.cy.gaea.common.protocol;
  */
 public enum CommandType {
 
-	REQUEST, RESPONSE;
+/*	REQUEST, RESPONSE;
 
 	public static CommandType valueOf(int ordinal) {
 		switch (ordinal) {
@@ -14,5 +14,24 @@ public enum CommandType {
 			default:
 				return RESPONSE;
 		}
+	}*/
+
+	CREATE(1,"CREATE");
+
+	private int key;
+
+	private String val;
+
+	private CommandType(int key,String val){
+		this.key=key;
+		this.val=val;
+	}
+
+	public int getKey() {
+		return key;
+	}
+
+	public String getVal() {
+		return val;
 	}
 }

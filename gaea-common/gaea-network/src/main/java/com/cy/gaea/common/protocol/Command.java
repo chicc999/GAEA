@@ -5,7 +5,10 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Created by cy on 2016/7/10.
+ * 命令格式
+ * +-------+------------+--------+------+
+ * | 总长度 | header长度 | header | body |
+ * +-------+------------+--------+------+
  */
 public abstract class Command {
 	protected String requestId;
@@ -17,6 +20,7 @@ public abstract class Command {
 
 	protected Command(String requestId) {
 		this.requestId = requestId;
+		header.put("",requestId);
 	}
 
 	public final String getRequestId() {
