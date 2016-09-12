@@ -1,4 +1,4 @@
-package com.cy.gaea.common.util;
+package com.cy.gaea.common.netty.handler;
 
 import com.cy.gaea.common.protocol.Command;
 import io.netty.channel.ChannelHandlerContext;

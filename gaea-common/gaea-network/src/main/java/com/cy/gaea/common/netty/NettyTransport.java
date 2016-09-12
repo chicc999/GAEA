@@ -7,6 +7,7 @@ import java.util.concurrent.ThreadFactory;
 
 import com.cy.gaea.common.exception.RemotingIOException;
 import com.cy.gaea.common.netty.config.NettyConfig;
+import com.cy.gaea.common.netty.handler.CommandHandlerFactory;
 import com.cy.gaea.common.protocol.Command;
 import com.cy.gaea.common.util.NamedThreadFactory;
 import io.netty.channel.Channel;
@@ -23,6 +24,9 @@ public abstract class NettyTransport extends Service implements Transport  {
     protected ExecutorService serviceExecutor;
     // 传输配置
     protected NettyConfig config;
+
+    // 命令处理器工厂
+    protected CommandHandlerFactory factory;
 
     // IO处理线程池
     protected EventLoopGroup ioLoopGroup;
