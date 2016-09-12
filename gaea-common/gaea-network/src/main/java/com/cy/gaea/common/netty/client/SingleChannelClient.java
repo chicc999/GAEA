@@ -8,7 +8,7 @@ import java.util.concurrent.*;
 
 import com.cy.gaea.common.exception.ConnectTimeoutException;
 import com.cy.gaea.common.exception.RequestTimeoutException;
-import com.cy.gaea.common.netty.NettyAbstract;
+import com.cy.gaea.common.netty.NettyTransport;
 import com.cy.gaea.common.netty.ResponseFuture;
 import com.cy.gaea.common.netty.config.NettyClientConfig;
 import com.cy.gaea.common.util.NamedThreadFactory;
@@ -30,7 +30,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
  *
  * 单连接客户端
  */
-public class SingleChannelClient extends NettyAbstract {
+public class SingleChannelClient extends NettyTransport {
 
 	Logger logger = LoggerFactory.getLogger(SingleChannelClient.class);
 

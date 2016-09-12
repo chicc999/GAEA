@@ -17,7 +17,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 /**
  * Created by cy on 2016/7/10.
  */
-public abstract class NettyAbstract extends Service implements Transport  {
+public abstract class NettyTransport extends Service implements Transport  {
 
     // 异步回调 & 业务处理执行器
     protected ExecutorService serviceExecutor;
@@ -30,12 +30,12 @@ public abstract class NettyAbstract extends Service implements Transport  {
     // 是否是内部创建的IO处理线程池
     protected boolean createIoLoopGroup;
 
-    public NettyAbstract(NettyConfig config) {
+    public NettyTransport(NettyConfig config) {
 		this(config,null,null);
 	}
 
-    public NettyAbstract(NettyConfig config, ExecutorService serviceExecutor,
-            EventLoopGroup ioLoopGroup) {
+    public NettyTransport(NettyConfig config, ExecutorService serviceExecutor,
+                          EventLoopGroup ioLoopGroup) {
         this.serviceExecutor = serviceExecutor;
         this.config = config;
         this.ioLoopGroup = ioLoopGroup;
