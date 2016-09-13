@@ -1,4 +1,4 @@
-package com.cy.gaea.common.netty.config;
+package com.cy.gaea.common.netty;
 
 /**
  * Created by cy on 2016/7/10.

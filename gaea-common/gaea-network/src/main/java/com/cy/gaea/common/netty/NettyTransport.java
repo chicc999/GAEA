@@ -6,7 +6,6 @@ import java.util.concurrent.ThreadFactory;
 
 
 import com.cy.gaea.common.exception.RemotingIOException;
-import com.cy.gaea.common.netty.config.NettyConfig;
 import com.cy.gaea.common.netty.handler.CommandHandlerFactory;
 import com.cy.gaea.common.protocol.Command;
 import com.cy.gaea.common.util.NamedThreadFactory;
@@ -35,14 +34,15 @@ public abstract class NettyTransport extends Service implements Transport  {
     protected boolean createIoLoopGroup;
 
     public NettyTransport(NettyConfig config) {
-		this(config,null,null);
+		this(config,null,null,null);
 	}
 
-    public NettyTransport(NettyConfig config, ExecutorService serviceExecutor,
-                          EventLoopGroup ioLoopGroup) {
+    public NettyTransport(NettyConfig config, EventLoopGroup ioLoopGroup,
+                          ExecutorService serviceExecutor,CommandHandlerFactory factory) {
         this.serviceExecutor = serviceExecutor;
         this.config = config;
         this.ioLoopGroup = ioLoopGroup;
+        this.factory = factory;
     }
 
     @Override

@@ -16,7 +16,8 @@ public enum CommandType {
 		}
 	}*/
 
-	CREATE(1,"CREATE");
+	CREATE(1,"CREATE"),
+	HEARTBEAT(51,"HEARTBEAT");
 
 	private int key;
 

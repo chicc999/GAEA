@@ -1,9 +1,11 @@
-package com.cy.gaea.common.netty.config;
+package com.cy.gaea.common.netty.client;
+
+import com.cy.gaea.common.netty.NettyConfig;
 
 /**
  * Created by cy on 2016/7/10.
  */
-public class NettyClientConfig extends NettyConfig{
+public class NettyClientConfig extends NettyConfig {
 	// 连接超时(毫秒)
 	private int connectionTimeout = 5000;
 

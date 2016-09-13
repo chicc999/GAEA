@@ -10,7 +10,6 @@ import com.cy.gaea.common.exception.ConnectTimeoutException;
 import com.cy.gaea.common.exception.RequestTimeoutException;
 import com.cy.gaea.common.netty.NettyTransport;
 import com.cy.gaea.common.netty.ResponseFuture;
-import com.cy.gaea.common.netty.config.NettyClientConfig;
 import com.cy.gaea.common.util.NamedThreadFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
