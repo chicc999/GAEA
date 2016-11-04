@@ -10,7 +10,7 @@
     <artifactId>gaea-client</artifactId>
     <packaging>jar</packaging>
 
-    <name>gaea-client</name>
+    <name>client</name>
     <url>http://maven.apache.org</url>
 
     <properties>
