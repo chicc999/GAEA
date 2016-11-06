@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by cy on 2016/7/19.
  */
-abstract class Service implements LifeCycle {
+public abstract class Service implements LifeCycle {
 
     Logger logger = LoggerFactory.getLogger(Service.class);
 
@@ -76,35 +76,35 @@ abstract class Service implements LifeCycle {
      *
      * @throws Exception
      */
-    abstract void beforeStart() throws Exception;
+    public abstract void beforeStart() throws Exception;
 
     /**
      * 启动
      *
      * @throws Exception
      */
-    abstract void doStart() throws Exception;
+    public abstract void doStart() throws Exception;
 
     /**
      * 启动后
      *
      * @throws Exception
      */
-    abstract void afterStart() throws Exception;
+    public abstract void afterStart() throws Exception;
 
     /**
      * 停止前
      */
-    abstract void beforeStop();
+    public abstract void beforeStop();
 
     /**
      * 停止
      */
-    abstract void doStop();
+    public abstract void doStop();
 
     /**
      * 停止后
      */
-    abstract void afterStop();
+    public abstract void afterStop();
 
 }

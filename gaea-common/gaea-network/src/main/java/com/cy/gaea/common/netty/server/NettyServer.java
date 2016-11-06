@@ -77,7 +77,7 @@ public class NettyServer extends NettyTransport {
 	}
 
 	@Override
-	protected void doStart() throws Exception {
+	public void doStart() throws Exception {
 		super.doStart();
 		NettyServerConfig serverConfig = (NettyServerConfig) config;
 		InetSocketAddress address;
@@ -115,7 +115,7 @@ public class NettyServer extends NettyTransport {
 	}
 
 	@Override
-	protected void doStop() {
+	public void doStop() {
 		if (createBossLoopGroup) {
 			bossLoopGroup.shutdownGracefully();
 			bossLoopGroup = null;

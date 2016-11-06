@@ -153,7 +153,7 @@ public class SingleChannelClient extends NettyTransport {
 	 *
 	 * @throws Exception
 	 */
-	protected void beforeStart() throws Exception {
+	public void beforeStart() throws Exception {
 
 	}
 
@@ -162,7 +162,7 @@ public class SingleChannelClient extends NettyTransport {
 	 *
 	 * @throws Exception
 	 */
-	protected void doStart() throws Exception {
+	public void doStart() throws Exception {
 		super.doStart();
 		// Netty客户端启动器
 		bootstrap = new Bootstrap();
@@ -217,21 +217,21 @@ public class SingleChannelClient extends NettyTransport {
 	 *
 	 * @throws Exception
 	 */
-	protected void afterStart() throws Exception {
+	public void afterStart() throws Exception {
 
 	}
 
 	/**
 	 * 停止前
 	 */
-	protected void beforeStop()  {
+	public void beforeStop()  {
 
 	}
 
 	/**
 	 * 停止
 	 */
-	protected void doStop()  {
+	public void doStop()  {
 			super.doStop();
 		if(cleanup != null){
 			cleanup.shutdown();
@@ -255,7 +255,7 @@ public class SingleChannelClient extends NettyTransport {
 	 * 停止后
 	 */
 	@Override
-	protected void afterStop()  {
+	public void afterStop()  {
 
 	}
 }

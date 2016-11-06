@@ -94,7 +94,7 @@ public abstract class NettyTransport extends Service implements Transport  {
      * @throws Exception
      */
     @Override
-    protected void beforeStart() throws Exception {
+    public void beforeStart() throws Exception {
 
     }
 
@@ -104,7 +104,7 @@ public abstract class NettyTransport extends Service implements Transport  {
      * @throws Exception
      */
     @Override
-    protected void doStart() throws Exception {
+    public void doStart() throws Exception {
 
         if (ioLoopGroup == null) {
             ioLoopGroup = createEventLoopGroup(config.getWorkerThreads(), new NamedThreadFactory("IoLoopGroup"));
@@ -121,7 +121,7 @@ public abstract class NettyTransport extends Service implements Transport  {
      * @throws Exception
      */
     @Override
-    protected void afterStart() throws Exception {
+    public void afterStart() throws Exception {
 
     }
 
@@ -129,7 +129,7 @@ public abstract class NettyTransport extends Service implements Transport  {
      * 停止前
      */
     @Override
-    protected void beforeStop()  {
+    public void beforeStop()  {
 
     }
 
@@ -137,7 +137,7 @@ public abstract class NettyTransport extends Service implements Transport  {
      * 停止
      */
     @Override
-    protected void doStop()  {
+    public void doStop()  {
         if (createIoLoopGroup) {
             ioLoopGroup.shutdownGracefully();
             ioLoopGroup = null;
@@ -151,7 +151,7 @@ public abstract class NettyTransport extends Service implements Transport  {
      * 停止后
      */
     @Override
-    protected void afterStop()  {
+    public void afterStop()  {
 
     }
 
