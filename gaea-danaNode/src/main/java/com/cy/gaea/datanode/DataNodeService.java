@@ -1,7 +1,7 @@
 package com.cy.gaea.datanode;
 
-import com.cy.gaea.common.netty.NettyConfig;
-import com.cy.gaea.common.netty.Service;
+import com.cy.gaea.commons.netty.NettyConfig;
+import com.cy.gaea.commons.netty.Service;
 
 
 /**

@@ -9,7 +9,7 @@
         <module>gaea-domainNode</module>
         <module>gaea-danaNode</module>
         <module>gaea-client</module>
-        <module>gaea-common</module>
+        <module>gaea-commons</module>
     </modules>
     <packaging>pom</packaging>
 
