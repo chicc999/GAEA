@@ -53,7 +53,7 @@
         <property name="webRegistryURL" value="${registry.webRegistryURL}" />
     </bean>
 
-    <bean id="dataNodeService" class="com.cy.gaea.datanode.DataNodeService" destroy-method="stop">
+    <bean id="dataNodeService" class="com.cy.gaea.commons.commons.datanode.DataNodeService" destroy-method="stop">
         <property name="config" ref="brokerConfig"/>
     </bean>
 

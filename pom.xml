@@ -36,6 +36,12 @@
                 <version>${gaea.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.cy.gaea</groupId>
+                <artifactId>gaea-service</artifactId>
+                <version>${gaea.version}</version>
+            </dependency>
+
             <!--spring-->
             <dependency>
                 <groupId>org.springframework</groupId>
