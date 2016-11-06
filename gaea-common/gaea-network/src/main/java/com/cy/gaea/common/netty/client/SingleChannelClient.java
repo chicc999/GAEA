@@ -48,7 +48,7 @@ public class SingleChannelClient extends NettyTransport {
 
 	public SingleChannelClient(NettyClientConfig config, ExecutorService serviceExecutor,
 							   EventLoopGroup ioLoopGroup) {
-		super(config,serviceExecutor,ioLoopGroup);
+		super(config,ioLoopGroup,serviceExecutor,null);
 	}
 
 
