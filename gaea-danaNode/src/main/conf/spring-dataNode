@@ -5,56 +5,12 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
 
-    <bean id="brokerConfig" class="com.jd.jmq.server.broker.BrokerConfig">
+    <bean id="dataNodeConfig" class="com.cy.gaea.datanode.DataNodeConfig">
         <property name="nettyServerConfig" ref="nettyServerConfig"/>
-        <property name="authentication" ref="authentication"/>
-        <property name="haConfig" ref="haConfig"/>
-        <property name="storeConfig" ref="storeConfig"/>
-        <property name="registryUrl" value="${registry.url}"/>
-        <property name="roleDecider" value="${broker.roleDecider}"/>
-        <property name="protocols" value="${broker.protocols}"/>
-        <property name="retryConfig" ref="retryConfig"/>
-        <property name="group" value="${broker.group}"/>
-        <property name="getThreads" value="${broker.getThreads}"/>
-        <property name="getQueueCapacity" value="${broker.getQueueCapacity}"/>
-        <property name="putThreads" value="${broker.putThreads}"/>
-        <property name="putQueueCapacity" value="${broker.putQueueCapacity}"/>
-        <property name="adminThreads" value="${broker.adminThreads}"/>
-        <property name="useLocalConfig" value="${registry.useLocalConfig}"/>
-        <property name="brokerPath" value="${registry.brokerPath}"/>
-        <property name="topicPath" value="${registry.topicPath}"/>
-        <property name="livePath" value="${registry.livePath}"/>
-        <property name="configPath" value="${registry.configPath}"/>
-        <property name="controllerPath" value="${registry.controllerPath}"/>
-        <property name="dataCenterPath" value="${registry.dataCenterPath}"/>
-        <property name="compressed" value="${registry.compressed}"/>
-        <property name="ackTimeout" value="${broker.ackTimeout}"/>
-        <property name="batchSize" value="${broker.batchSize}"/>
-        <property name="checkAckExpireInterval" value="${broker.checkAckExpireInterval}"/>
-        <property name="checkTransactionExpireInterval" value="${broker.checkTransactionExpireInterval}"/>
-        <property name="perfStatInterval" value="${broker.perfStatInterval}"/>
-        <property name="jmxExporter" ref="jmxExporter"/>
-        <property name="jmxUser" value="${jmx.user}"/>
-        <property name="jmxPassword" value="${jmx.password}"/>
-        <property name="nettyClient" ref="nettyClient"/>
-        <property name="cacheService" ref="cacheService" />
-        <property name="retryPolicy" ref="retryPolicy"/>
-        <property name="encryptKey" value="${des.key}"/>
-        <property name="clientStatConfig" ref="clientStatConfig"/>
-        <property name="webRegistryInterval" value="${registry.webInterval}"/>
-        <property name="consumerContinueErrs" value="${broker.consumerContinueErrs}" />
-        <property name="pushMode" value="${broker.pushMode}"/>
-        <property name="prefetchSize" value="2000"/>
-        <property name="pusherPollTimeout" value="100"/>
-        <property name="checkBlockExpireInterval" value="1000"/>
-        <property name="tokenPrefix" value="${jmq_token_prefix}" />
-        <property name="dynamicZkRegistryInterval" value="${registry.dynamicZkInterval}" />
-        <property name="registryInfoFromWeb" value="${registry.getFromWeb}" />
-        <property name="webRegistryURL" value="${registry.webRegistryURL}" />
     </bean>
 
-    <bean id="dataNodeService" class="com.cy.gaea.commons.commons.datanode.DataNodeService" destroy-method="stop">
-        <property name="config" ref="brokerConfig"/>
+    <bean id="dataNodeService" class="com.cy.gaea.datanode.DataNodeService" destroy-method="stop">
+        <property name="config" ref="dataNodeConfig"/>
     </bean>
 
 
