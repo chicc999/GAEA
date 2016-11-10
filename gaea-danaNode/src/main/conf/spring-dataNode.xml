@@ -10,7 +10,7 @@
     </bean>
 
     <bean id="dataNodeService" class="com.cy.gaea.datanode.DataNodeService" destroy-method="stop">
-        <property name="config" ref="dataNodeConfig"/>
+        <property name="dataNodeConfig" ref="dataNodeConfig"/>
     </bean>
 
 

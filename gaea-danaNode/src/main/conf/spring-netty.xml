@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	">
+
+    <bean id="nettyServerConfig" class="com.cy.gaea.commons.netty.server.NettyServerConfig">
+        <property name="sendTimeout" value="${netty.server.sendTimeout}"/>
+        <property name="workerThreads" value="${netty.server.workerThreads}"/>
+        <property name="callbackExecutorThreads" value="${netty.server.callbackExecutorThreads}"/>
+        <property name="selectorThreads" value="${netty.server.selectorThreads}"/>
+        <property name="channelMaxIdleTime" value="${netty.server.channelMaxIdleTime}"/>
+        <property name="reuseAddress" value="${netty.server.reuseAddress}"/>
+        <property name="soLinger" value="${netty.server.soLinger}"/>
+        <property name="tcpNoDelay" value="${netty.server.tcpNoDelay}"/>
+        <property name="keepAlive" value="${netty.server.keepAlive}"/>
+        <property name="soTimeout" value="${netty.server.soTimeout}"/>
+        <property name="socketBufferSize" value="${netty.server.socketBufferSize}"/>
+        <property name="epoll" value="${netty.server.epoll}"/>
+        <property name="maxOneway" value="${netty.server.maxOneway}"/>
+        <property name="maxAsync" value="${netty.server.maxAsync}"/>
+        <property name="port" value="${broker.port}"/>
+        <property name="backlog" value="${netty.server.backlog}"/>
+        <property name="ip" value="${netty.server.ip}"/>
+    </bean>
+
+
+    <bean id="nettyClientConfig" class="com.cy.gaea.commons.netty.client.NettyClientConfig">
+        <property name="sendTimeout" value="${netty.client.sendTimeout}"/>
+        <property name="workerThreads" value="${netty.client.workerThreads}"/>
+        <property name="callbackExecutorThreads" value="${netty.client.callbackExecutorThreads}"/>
+        <property name="selectorThreads" value="${netty.client.selectorThreads}"/>
+        <property name="channelMaxIdleTime" value="${netty.client.channelMaxIdleTime}"/>
+        <property name="reuseAddress" value="${netty.client.reuseAddress}"/>
+        <property name="soLinger" value="${netty.client.soLinger}"/>
+        <property name="tcpNoDelay" value="${netty.client.tcpNoDelay}"/>
+        <property name="keepAlive" value="${netty.client.keepAlive}"/>
+        <property name="soTimeout" value="${netty.client.soTimeout}"/>
+        <property name="socketBufferSize" value="${netty.client.socketBufferSize}"/>
+        <property name="epoll" value="${netty.client.epoll}"/>
+        <property name="maxOneway" value="${netty.client.maxOneway}"/>
+        <property name="maxAsync" value="${netty.client.maxAsync}"/>
+        <property name="connectionTimeout" value="${netty.client.connectionTimeout}"/>
+    </bean>
+
+
+</beans>

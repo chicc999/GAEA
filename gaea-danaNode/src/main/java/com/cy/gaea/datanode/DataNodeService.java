@@ -11,7 +11,15 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class DataNodeService extends Service {
 
-	private DataNodeConfig config;
+	@Autowired
+	private DataNodeConfig dataNodeConfig;
+
+	public DataNodeService() {
+	}
+
+	public void setDataNodeConfig(DataNodeConfig dataNodeConfig) {
+		this.dataNodeConfig = dataNodeConfig;
+	}
 
 	@Override
 	public void beforeStart() throws Exception {
@@ -42,4 +50,5 @@ public class DataNodeService extends Service {
 	public void afterStop() {
 
 	}
+
 }
