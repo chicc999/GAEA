@@ -2,6 +2,7 @@ package com.cy.gaea.datanode;
 
 import com.cy.gaea.commons.netty.NettyConfig;
 import com.cy.gaea.commons.Service;
+import com.cy.gaea.commons.netty.server.NettyServer;
 import com.cy.gaea.commons.netty.server.NettyServerConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -13,6 +14,10 @@ public class DataNodeService extends Service {
 
 	@Autowired
 	private DataNodeConfig dataNodeConfig;
+
+	// Netty服务
+	@Autowired
+	protected NettyServer nettyServer;
 
 	public DataNodeService() {
 	}

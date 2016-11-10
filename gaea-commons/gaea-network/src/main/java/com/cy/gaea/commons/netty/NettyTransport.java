@@ -22,6 +22,7 @@ public abstract class NettyTransport extends Service implements Transport  {
 
     // 异步回调 & 业务处理执行器
     protected ExecutorService serviceExecutor;
+
     // 传输配置
     protected NettyConfig config;
 

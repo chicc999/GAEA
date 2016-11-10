@@ -20,7 +20,7 @@
         <property name="epoll" value="${netty.server.epoll}"/>
         <property name="maxOneway" value="${netty.server.maxOneway}"/>
         <property name="maxAsync" value="${netty.server.maxAsync}"/>
-        <property name="port" value="${broker.port}"/>
+        <property name="port" value="${netty.server.port}"/>
         <property name="backlog" value="${netty.server.backlog}"/>
         <property name="ip" value="${netty.server.ip}"/>
     </bean>
@@ -44,5 +44,9 @@
         <property name="connectionTimeout" value="${netty.client.connectionTimeout}"/>
     </bean>
 
+
+    <bean id="nettyServer" class="com.cy.gaea.commons.netty.server.NettyServer">
+        <property name="n" value="${netty.client.sendTimeout}"/>
+    </bean>
 
 </beans>
