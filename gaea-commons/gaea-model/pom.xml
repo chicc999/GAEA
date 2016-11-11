@@ -1,26 +1,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>gaea-all</artifactId>
+        <artifactId>gaea-common</artifactId>
         <groupId>com.cy.gaea</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>gaea-common</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>gaea-model</artifactId>
+    <packaging>jar</packaging>
 
-    <name>gaea-common</name>
+    <name>gaea-model</name>
     <url>http://maven.apache.org</url>
-    <modules>
-        <module>gaea-network</module>
-        <module>gaea-service</module>
-        <module>gaea-model</module>
-        <module>gaea-utils</module>
-    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>

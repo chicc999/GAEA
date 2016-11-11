@@ -44,9 +44,4 @@
         <property name="connectionTimeout" value="${netty.client.connectionTimeout}"/>
     </bean>
 
-
-    <bean id="nettyServer" class="com.cy.gaea.commons.netty.server.NettyServer">
-        <property name="n" value="${netty.client.sendTimeout}"/>
-    </bean>
-
 </beans>

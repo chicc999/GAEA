@@ -2,8 +2,11 @@ package com.cy.gaea.datanode;
 
 import com.cy.gaea.commons.netty.NettyConfig;
 import com.cy.gaea.commons.Service;
+import com.cy.gaea.commons.netty.handler.CommandHandler;
+import com.cy.gaea.commons.netty.handler.CommandHandlerFactory;
 import com.cy.gaea.commons.netty.server.NettyServer;
 import com.cy.gaea.commons.netty.server.NettyServerConfig;
+import com.cy.gaea.commons.utils.ArgumentUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
@@ -16,7 +19,6 @@ public class DataNodeService extends Service {
 	private DataNodeConfig dataNodeConfig;
 
 	// Netty服务
-	@Autowired
 	protected NettyServer nettyServer;
 
 	public DataNodeService() {
@@ -28,7 +30,10 @@ public class DataNodeService extends Service {
 
 	@Override
 	public void beforeStart() throws Exception {
+		ArgumentUtil.checkNotNull(dataNodeConfig,"dataNodeConfig");
+		ArgumentUtil.checkNotNull(dataNodeConfig.getNettyServerConfig(),"nettyServerConfig");
 
+		//nettyServer = new NettyServer(dataNodeConfig.getNettyServerConfig(),null,null,null, commandHandlerFactory);
 	}
 
 	@Override
