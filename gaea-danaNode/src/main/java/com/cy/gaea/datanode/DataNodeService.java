@@ -4,6 +4,7 @@ import com.cy.gaea.commons.netty.NettyConfig;
 import com.cy.gaea.commons.Service;
 import com.cy.gaea.commons.netty.handler.CommandHandler;
 import com.cy.gaea.commons.netty.handler.CommandHandlerFactory;
+import com.cy.gaea.commons.netty.handler.DefaultHandlerFactory;
 import com.cy.gaea.commons.netty.server.NettyServer;
 import com.cy.gaea.commons.netty.server.NettyServerConfig;
 import com.cy.gaea.commons.utils.ArgumentUtil;
@@ -33,7 +34,9 @@ public class DataNodeService extends Service {
 		ArgumentUtil.checkNotNull(dataNodeConfig,"dataNodeConfig");
 		ArgumentUtil.checkNotNull(dataNodeConfig.getNettyServerConfig(),"nettyServerConfig");
 
-		//nettyServer = new NettyServer(dataNodeConfig.getNettyServerConfig(),null,null,null, commandHandlerFactory);
+		CommandHandlerFactory defaultHandlerFactory = new DefaultHandlerFactory();
+
+		nettyServer = new NettyServer(dataNodeConfig.getNettyServerConfig(),null,null,null, defaultHandlerFactory);
 	}
 
 	@Override

@@ -5,7 +5,7 @@ package com.cy.gaea.commons.netty.handler;
  */
 public class DefaultHandlerFactory implements CommandHandlerFactory{
 
-
+	protected SessionHandler sessionHandler;
 
 	@Override
 	public CommandHandler getHandler(int type) {
