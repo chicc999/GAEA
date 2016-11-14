@@ -9,6 +9,8 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.epoll.EpollServerSocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.util.concurrent.EventExecutorGroup;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
@@ -17,6 +19,8 @@ import java.net.InetSocketAddress;
  * 服务
  */
 public class NettyServer extends NettyTransport {
+
+	private static Logger logger = LoggerFactory.getLogger(NettyServer.class);
 
 	// 接受连接请求的线程池
 	protected EventLoopGroup bossLoopGroup;
@@ -89,6 +93,7 @@ public class NettyServer extends NettyTransport {
 		bootStrap = new ServerBootstrap();
 		configure(serverConfig, address);
 		bootStrap.bind().sync();
+		logger.info(String.format("开始监听%s端口提供服务",serverConfig.getPort()));
 	}
 
 	/**

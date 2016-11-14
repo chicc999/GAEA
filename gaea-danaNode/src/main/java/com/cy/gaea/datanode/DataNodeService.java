@@ -41,7 +41,7 @@ public class DataNodeService extends Service {
 
 	@Override
 	public void doStart() throws Exception {
-
+		nettyServer.start();
 	}
 
 

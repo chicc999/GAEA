@@ -20,20 +20,6 @@ public class Bootstrap {
 
 	public static void main(String[] args){
 
-		// 重新加载log4j配置文件
-/*		URL url = Bootstrap.class.getCla <exclusions>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-simple</artifactId>
-                    </exclusion>
-                </exclusions>ssLoader().getResource("log4j.xml");
-		PropertyConfigurator.configure(url);*/
-
-
-
-
-
-
 		String ip;
 		try {
 			ip = InetAddress.getLocalHost().getHostAddress();
@@ -55,10 +41,21 @@ public class Bootstrap {
 		}
  			final DataNodeService dataNodeService = (DataNodeService)ctx.getBean(DATA_NODE_SERVICE);
 		try {
-			dataNodeService.doStart();
+			dataNodeService.start();
 		} catch (Exception e) {
 			logger.error("启动失败",e);
 		}
+
+
+		Runtime.getRuntime().addShutdownHook(new Thread() {
+			@Override
+			public void run() {
+				logger.info("system is being shutdown.");
+				if (dataNodeService.isStarted()) {
+					dataNodeService.stop();
+				}
+			}
+		});
 
 	}
 }
