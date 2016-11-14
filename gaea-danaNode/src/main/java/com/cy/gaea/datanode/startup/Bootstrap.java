@@ -1,14 +1,12 @@
 package com.cy.gaea.datanode.startup;
 
 import com.cy.gaea.datanode.DataNodeService;
-import org.apache.log4j.PropertyConfigurator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.net.InetAddress;
-import java.net.URL;
 import java.net.UnknownHostException;
 
 
@@ -23,8 +21,18 @@ public class Bootstrap {
 	public static void main(String[] args){
 
 		// 重新加载log4j配置文件
-		URL url = Bootstrap.class.getClassLoader().getResource("logback.xml");
-		PropertyConfigurator.configure(url);
+/*		URL url = Bootstrap.class.getCla <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-simple</artifactId>
+                    </exclusion>
+                </exclusions>ssLoader().getResource("log4j.xml");
+		PropertyConfigurator.configure(url);*/
+
+
+
+
+
 
 		String ip;
 		try {

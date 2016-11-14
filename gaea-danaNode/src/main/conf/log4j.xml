@@ -45,7 +45,7 @@
 
     <appender name="DEBUG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <encoding>UTF-8</encoding>
-        <file>${LOG_HOME}/debug.log</file>
+        <file>logs/debug.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <FileNamePattern>logs/debug.%d{yyyy-MM-dd}.log</FileNamePattern>
         </rollingPolicy>
@@ -79,8 +79,8 @@
 
     <root level="DEBUG">
         <appender-ref ref="stdout"/>
-<!--        <appender-ref ref="DEBUG_FILE"/>
-        <appender-ref ref="ERROR_FILE"/>-->
+        <appender-ref ref="DEBUG_FILE"/>
+        <appender-ref ref="ERROR_FILE"/>
     </root>
 
     <!-- 下面配置一些第三方包的日志过滤级别，用于避免刷屏 -->
